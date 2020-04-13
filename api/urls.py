@@ -3,8 +3,6 @@ from .views import ProjectViewSet
 from django.urls import path
 
 router = routers.DefaultRouter()
-router.register('project/', ProjectViewSet)
+router.register('project', ProjectViewSet)
 
-urlpatterns = [
-    path('/', router.urls),
-]
+urlpatterns = router.urls
